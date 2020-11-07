@@ -8,14 +8,14 @@ class BandsContainer extends Component {
   render() {
     return (
       <div>
-        <BandInput addBand={this.props.addBand} deleteBand={this.props.deleteBand}/>,
+        <BandInput addBand={this.props.addBand} deleteBand={this.props.deleteBand} />,
         <Bands bands={this.props.bands} deleteBand={this.props.deleteBand} />
       </div>
     )
   }
 }
 
-const mapStateToProps = ({bands}) => ({bands})
+const mapStateToProps = ({ bands }) => ({ bands })
 
 const mapDispatchToProps = dispatch => ({
   addBand: (id, name) => dispatch({ type: "ADD_BAND", id, name }),

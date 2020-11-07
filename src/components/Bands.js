@@ -4,9 +4,9 @@ import Band from './Band'
 class Bands extends Component {
 
   render() {
-    return(
+    return (
       <div>
-        {this.props.bands.map(band => <Band band={band} deleteBand={this.props.deleteBand}/>)}
+        {this.props.bands.map(band => <Band band={band} deleteBand={this.props.deleteBand} />)}
       </div>
     );
   }
