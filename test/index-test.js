@@ -50,7 +50,7 @@ describe('Band Component', () => {
     const band = { id: 1, name: 'Momus' };
     const wrapper = shallow(<Band band={band} />);
     expect(wrapper.find('li')).to.have.length(1);
-  });
+  }); 
 });
 
 describe('Redux', () => {
