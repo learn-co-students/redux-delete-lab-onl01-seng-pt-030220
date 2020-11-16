@@ -1,4 +1,4 @@
-import uuid from 'uuid'
+import uuid from 'uuid';
 export default function manageBand(state = {
   bands: []
 }, action) {
@@ -9,10 +9,13 @@ export default function manageBand(state = {
         id: uuid(),
         name: action.name
       }
-      return { bands: [...state.bands, band] }
+    
+      return { ...state, bands: [...state.bands, band] };
 
     case 'DELETE_BAND':
-      return { bands: state.bands.filter(band => band.id != action.id) }
+
+      return {bands: state.bands.filter(band => band.id !== action.id)}
+
     default:
       return state;
   }
