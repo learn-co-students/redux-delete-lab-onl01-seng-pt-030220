@@ -11,8 +11,7 @@ export default function manageBand(state = {
         id: uuid(),
         name: action.name
       }
-      // return { ...state, bands: [...state.bands, action.name] }
-      return { bands: state.bands.concat(band) };
+      return { ...state, bands: [...state.bands, band] }
 
     case 'DELETE_BAND':
       return {bands: state.bands.filter(band => band.id !== action.id)}
